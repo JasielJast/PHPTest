@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<leads>
+  <!-- lead example 1 with all possible attributes -->
+  <lead>
+    <id>12345</id> <!-- required, external ID of a lead -->
+    <created_at>2022-06-03 11:31:32 UTC</created_at> <!-- required -->
+    <seller_id>1</seller_id> <!-- required -->
+    <additional_info>Additional information.</additional_info>
+
+    <listing>
+      <id>6789</id> <!-- external ID of a listing -->
+      <msys_id>4215</msys_id> <!-- provide if listing ID from Machinio System is known -->
+      <location>Chicago, IL</location>
+      <manufacturer>John Deere</manufacturer>
+      <model>700L</model>
+      <condition>used</condition> <!-- required, possible values: "new", "used" -->
+      <stock_number>A1312491</stock_number>
+      <serial_number>B314211</serial_number>
+      <year>2020</year>
+      <price>20000</price>
+      <currency>usd</currency>
+      <translations>
+        <translation> <!-- required at least one translation --> 
+          <title>John Deere Dozer 700L</title> <!-- required -->
+          <description>John Deere dozer in good condition.</description>
+          <lang>en</lang> <!-- required -->
+          <categories>
+            <category>Construction</category>
+            <category>Dozer</category>
+          </categories>
+        </translation>
+      </translations>
+      <specs>
+        <spec>
+          <field>Hours</field>
+          <value>1000</value>
+          <position>1</position>
+          <lang>en</lang>
+        </spec>
+      </specs>
+      <image_urls>
+        <image_url>https://example.com/sample_image_1.jpg</image_url>
+        <image_url>https://example.com/sample_image_2.jpg</image_url>
+      </image_urls>
+    </listing>
+
+    <customer> <!-- required -->
+      <id>12532</id> <!-- external ID of a customer -->
+      <email>john@deere.com</email> <!-- It's recommended to provide an email value. Otherwise provide a name/company -->
+      <location>Chicago, IL</location>
+      <first_name>John</first_name>
+      <last_name>Deere</last_name>
+      <company>Example Machinery</company>
+      <phone_number>+1-111-111-11-11</phone_number>
+    </customer>
+  </lead>
+  
+  
+  <!-- lead example 2 with only required attributes -->
+  <lead>
+    <id>523542</id> <!-- required, external ID of a lead -->
+    <created_at>2022-06-03 12:31:32 UTC</created_at> <!-- required -->
+    <seller_id>1</seller_id> <!-- required -->
+
+    <listing>
+      <condition>new</condition> <!-- required, possible values: "new", "used" -->
+      <translations>
+        <translation> <!-- required at least one translation --> 
+          <title>New John Deere Dozer 700L</title> <!-- required -->
+          <lang>en</lang> <!-- required -->
+        </translation>
+      </translations>
+    </listing>
+
+    <customer> <!-- required -->
+      <email>john@deere.com</email> <!-- It's recommended to provide an email value. Otherwise provide a name/company -->
+    </customer>
+  </lead>  
+</leads>
